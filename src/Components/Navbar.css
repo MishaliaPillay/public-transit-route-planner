@@ -1,0 +1,31 @@
+
+
+/*          Gopal.A.Ecommerce_Shopping_Cart.11 April 2024*/
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(14, 0, 60);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .links {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  /*         Referrence Ends here*/
+  button{ 
+    color: white;
+    background-color: rgba(169, 169, 169, 0);
+    border: none;
+  }
+  .navtitle{
+    font-size: 20px;
+    color: white;
+margin-right: 75%;
+}
