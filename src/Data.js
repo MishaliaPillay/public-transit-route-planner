@@ -1,4 +1,4 @@
-[
+ export const  routesInfo= [
     {
       "id": "route-1",
       "title": "Downtown Express",

@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import AvailableRoutes from './Routes/AvailableRoutes'
 import TicketPurchase from './Purchases/TicketPurchase'
+import RouteCard from './Routes/RouteCard'
+
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
     <Routes>
     <Route path='/' element={ <AvailableRoutes/>}/>
       <Route path='/ticketpurchase' element={<TicketPurchase/>}/>
-  
+  <Route path='/route/:routeId' element={<RouteCard/>}/>
     </Routes>
 
     </BrowserRouter>

@@ -20,6 +20,9 @@
 
   /*         Referrence Ends here*/
   button{ 
+    padding-left: 15px;
+    padding-right: 15px;
+     cursor: pointer;
     color: white;
     background-color: rgba(169, 169, 169, 0);
     border: none;
