@@ -8,13 +8,13 @@ const LoadingScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/confirmation");
-    }, 2000);
+    }, 40000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div className="loading-screen">
+    <div className="Title">
       <MoonLoader color="#07001a" />
     </div>
   );

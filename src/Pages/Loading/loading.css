@@ -1,0 +1,12 @@
+.loadingsrc {
+    display: flex; /* Makes the container a flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    position: fixed; /* Positions the element relative to the viewport */
+    top: 0; /* Sets the top position to 0 (the top of the viewport) */
+    left: 0; /* Sets the left position to 0 (the left of the viewport) */
+    width: 100%; /* Sets the width to 100% of the viewport */
+    height: 100%; /* Sets the height to 100% of the viewport */
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: Adds a semi-transparent background */
+  }
+  

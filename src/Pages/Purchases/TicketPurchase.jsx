@@ -21,7 +21,7 @@ const TicketPurchase = () => {
 
   return (
     <div>
-      <h1>Your Purchased Tickets</h1>
+      <h1 className="TicketTitle">Your Purchased Tickets</h1>
       {Object.keys(shop).map((id) => {
         const quantity = shop[id];
         if (quantity > 0) {

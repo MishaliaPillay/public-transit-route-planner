@@ -1,17 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { routesInfo } from "../../Data";
 import "./availableRoutes.css";
+
 const AvailableRoutesPage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleClick = (id) => {
+    navigate(`/route/${id}`); // Navigate to the specified route
+  };
+
   return (
     <div>
-      <h2>Available Routes</h2>
+      <h2 className="availableTitle">Available Routes</h2>
       <ul>
         {routesInfo.map((route) => (
-          <li key={route.id}>
-            {/* Use Link to navigate to Route Information page */}
-            <Link to={`/route/${route.id}`}>{route.title}</Link>
-          </li>
+          <section className="ticket" key={route.id}>
+            <li
+              className="ticket-content-wrapper"
+              onClick={() => handleClick(route.id)}
+            >
+              {/* Remove Link and use onClick event handler */}
+              <span className="link">{route.title}</span>
+            </li>
+          </section>
         ))}
       </ul>
     </div>
