@@ -1,34 +1,46 @@
-
-
-/*          Gopal.A.Ecommerce_Shopping_Cart.11 April 2024*/
-
 .navbar {
-    width: 100%;
-    height: 80px;
-    background-color: rgb(14, 0, 60);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .links {
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #053b50;
+  display: flex;
+  justify-content: space-between; /* This positions items at the beginning and end */
+  align-items: center;
+}
 
-  /*         Referrence Ends here*/
-  button{ 
-    padding-left: 15px;
-    padding-right: 15px;
-     cursor: pointer;
-    color: white;
-    background-color: rgba(169, 169, 169, 0);
-    border: none;
+.links {
+  /* Removed margin-right: 50px; as it's not needed with justify-content */
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(169, 169, 169, 0);
+  border: none;
+}
+
+.navtitle {
+  font-size: 1em;
+  color: white;
+  /* Margin removed as justification handles positioning */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem; /* Reduce padding on smaller devices */
   }
-  .navtitle{
-    font-size: 20px;
-    color: white;
-margin-right: 75%;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+  }
 }

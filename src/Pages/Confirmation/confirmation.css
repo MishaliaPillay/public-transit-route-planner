@@ -1,0 +1,7 @@
+.successTxt {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures centering even on smaller screens */
+}
