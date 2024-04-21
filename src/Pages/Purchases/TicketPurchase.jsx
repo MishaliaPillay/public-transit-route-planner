@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-
 import { useNavigate } from "react-router-dom";
 import Ticket from "./Ticket";
 import { PurchaseContext } from "../../Context/PurchseContext";
