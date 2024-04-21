@@ -1,14 +1,21 @@
 import React, { useContext } from "react";
+
+import { useNavigate } from "react-router-dom";
 import Ticket from "./Ticket";
-import { PurchaseContext } from "../Context/PurchseContext"; // Assuming you've renamed it to PurchaseContext
-import { routesInfo } from "../Data";
+import { PurchaseContext } from "../../Context/PurchseContext";
+import { routesInfo } from "../../Data";
 import "./ticketPurchase.css";
+
 const TicketPurchase = () => {
   const { shop, getTotal, checkout } = useContext(PurchaseContext);
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
     checkout();
-    alert("Thank you for your purchase!");
+    navigate("/loading");
+  };
+  const continueShopping = () => {
+    navigate("/");
   };
 
   const totalAmount = getTotal();
@@ -30,12 +37,16 @@ const TicketPurchase = () => {
           <button className="btn" onClick={handleCheckout}>
             Checkout
           </button>
-          <button className="btn">Continue Shopping</button>
+          <button className="btn" onClick={continueShopping}>
+            Continue Shopping
+          </button>
         </div>
       ) : (
         <div className="checkout">
           <h4>Your Cart is Empty.</h4>
-          <button className="btn">Continue shopping</button>
+          <button className="btn" onClick={continueShopping}>
+            Continue shopping
+          </button>
         </div>
       )}
     </div>

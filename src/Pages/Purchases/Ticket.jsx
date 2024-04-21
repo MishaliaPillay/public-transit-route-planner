@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { PurchaseContext } from "../Context/PurchseContext";
-
+import { PurchaseContext } from "../../Context/PurchseContext";
+import { Trash, PlusSquare, MinusSquare } from "@phosphor-icons/react";
 const Ticket = ({ route }) => {
   const { id, title, duration, stops, price } = route;
   const { addRoute, removeRoute, updateShop, shop } =
@@ -12,6 +12,9 @@ const Ticket = ({ route }) => {
     if (itemQuantity > 0) {
       updateShop(id, itemQuantity - 1);
     }
+  };
+  const deleteItem = () => {
+    removeRoute(id);
   };
 
   return (
@@ -27,13 +30,21 @@ const Ticket = ({ route }) => {
         <strong>Price:</strong> ${price}
       </p>
       <div className="quantity-controls">
-        <button onClick={handleRemove}> - </button>
+        {" "}
+        <button onClick={deleteItem}>
+          <Trash size={32} />
+        </button>
+        <button onClick={handleRemove}>
+          <MinusSquare size={32} />{" "}
+        </button>
         <input
           type="text"
           value={itemQuantity}
           onChange={(e) => updateShop(id, Number(e.target.value))}
         />
-        <button onClick={() => addRoute(id)}> + </button>
+        <button onClick={() => addRoute(id)}>
+          <PlusSquare size={32} />{" "}
+        </button>
       </div>
     </div>
   );

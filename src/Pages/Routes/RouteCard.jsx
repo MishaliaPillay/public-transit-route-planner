@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { PurchaseContext } from "../Context/PurchseContext";
-import { routesInfo } from "../Data";
-
+import { PurchaseContext } from "../../Context/PurchseContext";
+import { routesInfo } from "../../Data";
+import { Coins } from "@phosphor-icons/react";
 const RouteCard = () => {
   const { id } = useParams();
   const { addRoute, shop } = useContext(PurchaseContext);
@@ -37,6 +37,7 @@ const RouteCard = () => {
         <p>Route not found</p>
       )}
       <button className="btn" onClick={handleBuy}>
+        <Coins size={24} />
         Buy {itemQuantity > 0 && `(${itemQuantity})`}
       </button>
     </div>

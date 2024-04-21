@@ -3,10 +3,12 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import AvailableRoutes from "./Routes/AvailableRoutes";
-import TicketPurchase from "./Purchases/TicketPurchase";
-import RouteCard from "./Routes/RouteCard";
+import AvailableRoutes from "./Pages/Routes/AvailableRoutes";
+import TicketPurchase from "./Pages/Purchases/TicketPurchase";
+import RouteCard from "./Pages/Routes/RouteCard";
 import PurchaseContextProvider from "./Context/PurchseContext";
+import Confirmation from "./Pages/Confirmation/Confirmation";
+import LoadingScreen from "./Pages/Loading/LoadingScreen";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/" element={<AvailableRoutes />} />
             <Route path="/ticketpurchase" element={<TicketPurchase />} />
             <Route path="/route/:id" element={<RouteCard />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/loading" element={<LoadingScreen />} />
           </Routes>
         </BrowserRouter>
       </PurchaseContextProvider>
