@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import { routesInfo } from "../Data";
-
+// refrrence : Gopal, A. (2024) 'eCommerce shopping cart ', Lecture,  University of the witswatersrand, 11 April.
 export const PurchaseContext = createContext();
 
 //Generates the initial state of the shop, by making an empty object where route IDs  and their values and 0
