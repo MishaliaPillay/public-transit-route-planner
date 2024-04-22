@@ -6,13 +6,16 @@ const Ticket = ({ route }) => {
   const { addRoute, removeRoute, updateShop, shop } =
     useContext(PurchaseContext);
 
-  const itemQuantity = shop[id] || 0;
+  const itemQuantity = shop[id] || 0; // It provides the default value of the itemquantity, this is the value that shows in the input box
 
+  // This  functions checks ifthe quanity is greater than 1 before decreasing the the quantity, and then udpates the new value of the quantity
   const handleRemove = () => {
     if (itemQuantity > 0) {
       updateShop(id, itemQuantity - 1);
     }
   };
+
+  //Removes specific route id from users cart
   const deleteItem = () => {
     removeRoute(id);
   };
@@ -34,6 +37,8 @@ const Ticket = ({ route }) => {
           <button onClick={handleRemove}>
             <MinusSquare size={32} />{" "}
           </button>
+
+          {/*Checks if the quantity of input has chnaged then updates it*/}
           <input
             type="text"
             value={itemQuantity}

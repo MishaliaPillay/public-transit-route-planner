@@ -7,12 +7,15 @@ const RouteCard = () => {
   const { id } = useParams();
   const { addRoute, shop } = useContext(PurchaseContext);
 
-  const route = routesInfo.find((route) => route.id === parseInt(id));
+  const route = routesInfo.find((route) => route.id === parseInt(id)); // used to find a specfic route id form routesInfo in the data
   const itemQuantity = shop[id] || 0; // Get the item quantity from the shop context
   const navigate = useNavigate();
+
+  //using addRoute From purchaseContext and relating this to the id of the respective route
   const handleBuy = () => {
     addRoute(id);
   };
+  //using the useNavigate Hook so that when this function is triggered takes user to "/" in url
   const back = () => {
     navigate("/");
   };
@@ -41,7 +44,7 @@ const RouteCard = () => {
           </button>
         </div>
       ) : (
-        <p>Route not found</p>
+        <p className="errorTxt">Route not found</p>
       )}
       <button className="btnBack" onClick={back}>
         <ArrowLeft size={24} />

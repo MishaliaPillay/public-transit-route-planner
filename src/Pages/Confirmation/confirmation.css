@@ -1,10 +1,12 @@
 .successTxt {
-  font-size: 2em;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  min-height: 100vh; /* Ensures viewport height */
+  font-size: 30px;
+  font-family: sans-serif; /* Optional: Set a base font */
   align-items: center;
-  min-height: 100vh; /* Ensures centering even on smaller screens */
+  justify-content: center;
 }
-.body{
-    background-color: #EEEEEE;
+.body {
+  background-color: #eeeeee;
 }

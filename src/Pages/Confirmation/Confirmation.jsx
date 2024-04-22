@@ -4,16 +4,16 @@ import { Cheers } from "@phosphor-icons/react";
 import "./confirmation.css";
 const Confirmation = () => {
   return (
-    <div>
+    <>
       <h4 className="successTxt">
         Payment succesful!! <Cheers size={32} />
-      </h4>
+      </h4>{/*This loads confetti to fall when this lage is opened*/}
       <Confetti
-        count={1000}
+        count={500}
         colors={["#52006A", "#CD113B", "#FF7600", "#FFA900"]}
         recycle={false}
       />
-    </div>
+    </>
   );
 };
 

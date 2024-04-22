@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import { routesInfo } from "../../Data";
 import "./availableRoutes.css";
 
@@ -20,7 +20,6 @@ const AvailableRoutesPage = () => {
               className="ticket-content-wrapper"
               onClick={() => handleClick(route.id)}
             >
-              {/* Remove Link and use onClick event handler */}
               <span className="link">{route.title}</span>
             </li>
           </section>

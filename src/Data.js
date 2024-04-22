@@ -17,7 +17,7 @@ export const routesInfo = [
     description: "Enjoy breathtaking views of the coastline as you travel.",
   },
   {
-    id:3,
+    id: 3,
     title: "Suburban Shuttle",
     duration: "45 mins",
     stops: 6,
@@ -25,7 +25,7 @@ export const routesInfo = [
     description: "Connects the suburbs with downtown, running every half hour.",
   },
   {
-    id:4,
+    id: 4,
     title: "Night Owl",
     duration: "30 mins",
     stops: 4,
