@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <PurchaseContextProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/public-transit-route-planner">
           <Navbar />
           <Routes>
             <Route path="/" element={<AvailableRoutes />} />
